@@ -13,7 +13,7 @@ public class FullTime extends Employee {
     private double salary;
     private double overtime;
     
-    // Define the Fullime class constructor
+    // Define the FullTime class constructor
     public FullTime (int id, String name, double sal,
                      double hourAndHalf, Vehicle vehicle) {
         super  (id, name, vehicle);
