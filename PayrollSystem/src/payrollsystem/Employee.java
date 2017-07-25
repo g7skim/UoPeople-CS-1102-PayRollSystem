@@ -7,14 +7,43 @@ package payrollsystem;
 
 /**
  *
- * @author admin
+ * @author Eugene Vereshchagin (g7skim)
  */
-public class Employee {
-    
+
+public abstract class Employee {
+    // Variables
     private int empId;
     private String name;
-    private Vehicle Vehicle;
-
+    private Vehicle vehicle;
+    
+    // Class constructor
+    public Employee() {
+        // Default constructor is a constructor with zero parameter
+        System.out.println("... inside default constructor");
+        empId = 0;
+        name = "";
+    }
+    
+    public Employee (int pEmpId, String pName, Vehicle pV) {
+        // Non default constructor with at least 1 parameter
+        System.out.println("... inside Employee non-default constructor");
+        empId = pEmpId;
+        name = pName;
+        this.vehicle = pV;
+    }
+    
+    public Employee (int pEmpId, String pName, String pPlate, String pColour) {
+        // Non default constructor with at least 1 parameter
+        System.out.println("... inside Employee non-default constructor");
+        empId = pEmpId;
+        name = pName;
+        this.vehicle = new Vehicle(pPlate, pColour);
+    }
+    
+    // Abstract method of the class: calculatePay() will be defined within FullTime and PartTime
+    // as these both classes are subclasses of Employee abstract class.
+    public abstract double calculatePay();
+    
     /**
      * @return the empId
      */
@@ -47,14 +76,14 @@ public class Employee {
      * @return the Vehicle
      */
     public Vehicle getVehicle() {
-        return Vehicle;
+        return vehicle;
     }
 
     /**
      * @param Vehicle the Vehicle to set
      */
     public void setVehicle(Vehicle Vehicle) {
-        this.Vehicle = Vehicle;
+        this.vehicle = Vehicle;
     }
     
 }

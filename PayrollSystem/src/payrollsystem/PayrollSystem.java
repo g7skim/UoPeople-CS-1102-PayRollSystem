@@ -7,7 +7,7 @@ package payrollsystem;
 
 /**
  *
- * @author admin
+ * @author Eugene Vereshchagin (g7skim)
  */
 public class PayrollSystem {
 
