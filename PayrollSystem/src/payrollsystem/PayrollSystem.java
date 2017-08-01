@@ -1,5 +1,4 @@
 package payrollsystem;
-
 /**
  *
  * @author Eugene Vereshchagin (g7skim)
